@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Zambia University College of Technology - IT Department Timetable</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    
+    #header {
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+    }
+    
+    #header h1 {
+      margin: 0;
+    }
+    
+    #container {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    
+    #sidebar {
+      background-color: #f2f2f2;
+      width: 200px;
+      padding: 20px;
+    }
+    
+    #main-content {
+      flex-grow: 1;
+      padding: 20px;
+    }
+    
+    #navigation {
+      background-color: #333;
+      color: #fff;
+      padding: 10px;
+    }
+    
+    #navigation ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+    
+    #navigation ul li {
+      display: inline-block;
+      margin-right: 10px;
+    }
+    
+    #footer {
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+    
+    .color-slide {
+      min-height: 200px;
+      min-width: 100%;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div id="header">
+    <h1>Zambia University College of Technology - IT Department</h1>
+  </div>
+  
+  <div id="container">
+    <div id="sidebar">
+      <h2>Sidebar</h2>
+      <!-- Put your sidebar content here -->
+    </div>
+    
+    <div id="main-content">
+      <div id="navigation">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Courses</a></li>
+          <li><a href="#">Timetable</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+      
+      <h2>IT Department Class Timetable</h2>
+
+     <!--  <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel" style="width: 500px; height: 0px;">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img class="d-block w-100" src="IMG_E0918.JPG" alt="First slide">
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100" src="IMG_0011.JPG" alt="Second slide">
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100" src="IMG_0014.JPG" alt="Third slide">
+    </div>
+  </div>
+</div>
+    </div>
+  </div> -->
+  
+  <div id="color-slideshow">
+    <div class="color-slide" style="background-color: red;"></div>
+    <div class="color-slide" style="background-color: blue;"></div>
+    <div class="color-slide" style="background-color: green;"></div>
+    <!-- Add more color slides here -->
+  </div>
+  
+  <div id="footer" style="position: absolute; bottom: 0;">
+    &copy; 2024 Zambia University College of Technology - IT Department
+  </div>
+  
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      var slideIndex = 0;
+      showSlides();
+
+      function showSlides() {
+        var slides = $('.color-slide');
+
+        // Hide all slides
+        slides.hide();
+
+        // Increment slide index
+        slideIndex++;
+
+        // Reset slide index if it exceeds the total number of slides
+        if (slideIndex > slides.length) {
+          slideIndex = 1;
+        }
+
+        // Show the current slide
+        slides.eq(slideIndex - 1).fadeIn();
+
+        // Repeat the slideshow after 2 seconds
+        setTimeout(showSlides, 2000);
+      }
+    });
+  </script>
+</body>
+</html>
